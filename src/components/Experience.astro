@@ -1,0 +1,23 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+const EXPERIENCE = [
+  {
+    title: 'Desarrollador de sistemas en BrixSoftware',
+    description: 'Encargado de desarrollar nuevas funcionalidades, realizar mantenimientos y correcciones de bugs.',
+    date: '2022 - 2023',
+  },
+  {
+    title: '"Earth Conquest" - Aplicación web para proyecto de fin de carrera',
+    description: 'Desarrollada desde cero con un equipo de 6 compañeros realizamos este proyecto. Aplicando todos los conocimientos de la carrera, utilizando React para frontend y Python para backend.',
+    date: 'Diciembre 2023',
+    link: 'https://github.com/aguslopezp/earth-conquest/tree/develop'
+  }
+]
+---
+<ol class="relative border-s border-gray-200 ml-4">  
+  {EXPERIENCE.map(experience => (
+    <li class="mb-10 ms-4">
+      <ExperienceItem {...experience} />
+    </li>
+  ))}
+</ol>
